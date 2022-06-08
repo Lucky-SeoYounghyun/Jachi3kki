@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <FrameLayout
+        android:id="@+id/Top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/border_layout_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/timer_container"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border_layout_timer"
+            android:visibility="gone"
+
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+
+                >
+
+                <TextView
+                    android:id="@+id/Text_view_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-5dp"
+                    android:text="00:00:00"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="top"
+                    android:background="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/start_timer"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_layout_timer_button_left"
+                    android:text="Start"
+                    android:textColor="@color/green"
+                    android:visibility="visible"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/stop_timer"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_layout_timer_button_left"
+                    android:text="Stop"
+                    android:textColor="@color/green"
+                    android:visibility="gone"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reset_timer"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/border_layout_timer_button_right"
+                    android:text="Reset"
+                    android:textColor="@color/white" />
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1.5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1.5dp"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Top_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <FrameLayout
+        android:id="@+id/Bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_layout_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/question_dialog_button"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:src="@drawable/question_mark"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            >
+
+
+        </ImageButton>
+
+        <FrameLayout
+            android:id="@+id/Bottom_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/start_record"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_recorder"
+                android:visibility="visible"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/end_record"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_recorder_active"
+                android:visibility="gone"></ImageButton>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110sp"
+        android:background="@drawable/border_layout_inv"
+        android:src="@drawable/leftbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Top_view" />
+
+    <ImageButton
+        android:id="@+id/imageButton_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="110sp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_layout_inv"
+        android:src="@drawable/rightbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Top_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/icon_home"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/menu_ingredient"
+        android:icon="@drawable/icon_ingredient"
+        android:title="재료 선택" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/icon_search"
+        android:title="검색" />
+
+    <item
+        android:id="@+id/menu_vitamin"
+        android:icon="@drawable/icon_vitamin"
+        android:title="비타민 선택" />
+
+    <item
+        android:id="@+id/menu_fridge"
+        android:icon="@drawable/icon_fridge"
+        android:title="냉장고" />
+
+</menu>

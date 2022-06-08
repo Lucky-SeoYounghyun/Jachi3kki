@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".fragment.DetailFragment">
+
+    <ImageButton
+        android:id="@+id/detailClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="#efefef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/fontstyle"
+        android:text="º상세조건º"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                tools:ignore="MissingConstraints">
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox1"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:layout_gravity="left|center"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="볶기"
+                    android:textSize="16dp"
+                    />
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox2"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="찌기"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox3"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="기타"
+                    android:textSize="16dp" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints">
+
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox4"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="left|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="튀기기"
+                    android:textSize="16dp"/>
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox5"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="굽기"
+                    android:textSize="16dp"/>
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox6"
+                    android:layout_width="101dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="끓이기"
+                    android:textSize="16dp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/fontstyle"
+        android:text="조리방법"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/complete"
+        android:layout_width="166dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/fontstyle"
+        android:text="선택완료"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontstyle"
+        android:text="음식분류"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        //
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                tools:ignore="MissingConstraints">
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox7"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="left|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="밥"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox8"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="반찬"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox9"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="국/찌개"
+                    android:textSize="16dp"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints">
+
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox10"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="left|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="후식"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox11"
+                    android:layout_width="101dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="일품"
+                    android:textSize="16dp"/>
+
+                <CheckBox
+                    android:layout_margin="20dp"
+                    android:id="@+id/checkBox12"
+                    android:layout_width="101dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="기타"
+                    android:textSize="16dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        //
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
