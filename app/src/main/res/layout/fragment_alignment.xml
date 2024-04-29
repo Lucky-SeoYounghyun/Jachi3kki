@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ff0000"
+    tools:context=".fragment.AlignmentFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#efefef"
+        android:orientation="vertical"
+        >
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00ff0000"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sort_title"
+            android:fontFamily="@font/fontstyle"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/recommend"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="   추천수"
+            android:fontFamily="@font/fontstyle"
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_recommand"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="150dp">
+
+            <RadioButton
+                android:id="@+id/likeCntSort"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/fontstyle"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="높은순" />
+
+            <RadioButton
+                android:id="@+id/likeCntSortReverse"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/fontstyle"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="낮은순" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_height="66dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:text="   조회수"
+            android:fontFamily="@font/fontstyle"
+            android:textSize="20dp" />
+
+
+        <RadioGroup
+            android:id="@+id/rg_view"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="150dp">
+
+            <RadioButton
+                android:id="@+id/viewCntSort"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/fontstyle"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="높은순" />
+
+            <RadioButton
+                android:layout_marginLeft="100dp"
+                android:id="@+id/viewCntSortReverse"
+                android:layout_width="160dp"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:fontFamily="@font/fontstyle"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:text="낮은순" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="165dp"
+            android:layout_height="55dp"
+            android:fontFamily="@font/fontstyle"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="선택완료" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

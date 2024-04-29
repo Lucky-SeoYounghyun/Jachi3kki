@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:id="@+id/cook"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="5dp">
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:fontFamily="@font/fontstyle"
+                android:textColor="#ff0000"
+                android:layout_gravity="end|center_vertical" />
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/swipe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/color_auto">
+
+            <ImageView
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/cook_Img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical|center"
+                android:background="@drawable/color_auto"
+                app:layout_constraintStart_toEndOf="@id/cook_Img"
+                app:layout_constraintTop_toTopOf="@id/cook_Img"
+                app:layout_constraintBottom_toBottomOf="@id/cook_Img"
+                android:id="@+id/payTxt"
+                android:fontFamily="@font/fontstyle"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:text="default Text입니다."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</LinearLayout>

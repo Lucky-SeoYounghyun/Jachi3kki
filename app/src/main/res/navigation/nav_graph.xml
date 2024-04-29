@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.c4project.Jachi3kki.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_ingredientFragment"
+            app:destination="@id/ingredientFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_vitaminFragment2"
+            app:destination="@id/vitaminFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_FridgeFragment"
+            app:destination="@id/FridgeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.c4project.Jachi3kki.fragment.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_alignmentFragment"
+            app:destination="@id/alignmentFragment"
+          />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientFragment"
+        android:name="com.c4project.Jachi3kki.fragment.IngredientFragment"
+        android:label="fragment_ingredient"
+        tools:layout="@layout/fragment_ingredient">
+
+        <argument
+            android:name="item"
+            app:argType="com.c4project.Jachi3kki.Class.SelectedItems"/>
+
+        <action
+            android:id="@+id/action_ingredientFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FridgeFragment"
+        android:name="com.c4project.Jachi3kki.fragment.FridgeFragment"
+        android:label="fragment_fridge"
+        tools:layout="@layout/fragment_fridge" >
+        <action
+            android:id="@+id/action_FridgeFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+        <action
+            android:id="@+id/action_FridgeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.c4project.Jachi3kki.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/vitaminFragment"
+        android:name="com.c4project.Jachi3kki.fragment.VitaminFragment"
+        android:label="fragment_vitamin"
+        tools:layout="@layout/fragment_vitamin" >
+        <action
+            android:id="@+id/action_vitaminFragment_to_ingredientFragment"
+            app:destination="@id/ingredientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.c4project.Jachi3kki.fragment.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipeFragment_to_alignmentFragment"
+            app:destination="@id/alignmentFragment"
+            />
+        <action
+            android:id="@+id/action_recipeFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.c4project.Jachi3kki.fragment.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add"
+        app:startDestination="@id/action_alignmentFragment_to_recipeFragment">
+        <action
+            android:id="@+id/action_addFragment_to_FridgeFragment"
+            app:destination="@id/FridgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alignmentFragment"
+        android:name="com.c4project.Jachi3kki.fragment.AlignmentFragment"
+        android:label="fragment_alignment"
+        tools:layout="@layout/fragment_alignment"
+        app:startDestination="@id/action_alignmentFragment_to_recipeFragment">
+        <action
+            android:id="@+id/action_alignmentFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:popUpTo="@id/recipeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_alignmentFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment"
+            app:popUpTo="@id/bookmarkFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.c4project.Jachi3kki.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:popUpTo="@id/recipeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_mainFragment"
+        app:destination="@id/mainFragment"
+        app:popUpTo="@id/nav_graph" />
+    <action
+        android:id="@+id/action_global_bookmarkFragment"
+        app:destination="@id/bookmarkFragment"
+        app:popUpTo="@id/mainFragment" />
+    <action
+        android:id="@+id/action_global_FridgeFragment"
+        app:destination="@id/FridgeFragment"
+        app:popUpTo="@id/mainFragment" />
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:popUpTo="@id/mainFragment" />
+    <action
+        android:id="@+id/action_global_vitaminFragment"
+        app:destination="@id/vitaminFragment"
+        app:popUpTo="@id/mainFragment" />
+    <action
+        android:id="@+id/action_global_ingredientFragment"
+        app:destination="@id/ingredientFragment"
+        app:popUpTo="@id/mainFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.c4project.Jachi3kki.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.c4project.Jachi3kki.fragment.SearchResultFragment"
+        android:label="SearchResultFragment" >
+        <argument
+            android:name="keyword"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>
